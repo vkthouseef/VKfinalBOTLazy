@@ -618,7 +618,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     await query.answer('♥️ Thank You LazyDeveloper ♥️')
 
 
-async def auto_filter(client, msg, query: CallbackQuery, spoll=False):
+async def auto_filter(client, msg, spoll=False):
     if not spoll:
         message = msg
         settings = await get_settings(message.chat.id)
