@@ -631,8 +631,8 @@ async def auto_filter(client, msg, spoll=False):
             if not files:
                 await client.send_message(req_channel,f"-🦋 #REQUESTED_CONTENT 🦋-,\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{message.from_user.id}\n\n🗃️",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-                await msg.message.reply_text(text=f"Hello my Love <a href='https://t.me/{message.username}'>{message.first_name}</a>, Your request has been sent to our admin dashboard !\nPlease keep some patience !. i promice, They will upload it as soon as possible dear love ❤️!", reply_to_message_id=message.id ,
-                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Thank You Baby 🔺", callback_data="close_data")]])) 
+                await msg.message.reply_text(text=f"Hello my Love <a href='https://t.me/{message.username}'>{message.first_name}</a>, Your request has been sent to our admin dashboard !\nPlease keep some patience !. i promice, They will upload it as soon as possible dear love ❤️!", reply_to_message_id=msg.message.id ,
+                                                                                                       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Thank You 🔺", callback_data="close_data")]])) 
                
                 if settings["spell_check"]:
                     return await advantage_spell_chok(msg)
