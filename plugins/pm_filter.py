@@ -631,8 +631,8 @@ async def auto_filter(client, msg, query: CallbackQuery, spoll=False):
             if not files:
                 await client.send_message(req_channel,f"-🦋 #REQUESTED_CONTENT 🦋-,\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{message.from_user.id}\n\n🗃️",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔺 Mark as Done 🔺", callback_data="close_data")]]))
-                await query.answer("\n🥰")
-                await message.reply_text(text=f"Hey sona {message.from_user.first_name}👋,\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ **ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ** !\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝**Content Name** : `{search}`\n➟ 👮**Requested By** : {message.from_user.first_name}\n\n༺@real_MoviesAdda2-ռօա2ɖɛǟȶɦ༻",
+                await message.reply_text(text=f"🥰")
+                await message.reply_text(text=f"Hey sona {message.from_user.first_name}👋,\nʏᴏᴜʀ ʀᴇQᴜᴇꜱᴛ ʜᴀꜱ ʙᴇᴇɴ ꜱᴇɴᴛ ᴛᴏ ᴏᴜʀ **ᴀᴅᴍɪɴ'ꜱ ᴅᴀꜱʜʙᴏᴀʀᴅ** !\nᴘʟᴇᴀꜱᴇ ᴋᴇᴇᴘ ꜱᴏᴍᴇ ᴘᴀᴛɪᴇɴᴄᴇ !\nᴛʜᴇʏ ᴡɪʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴀꜱ ꜱᴏᴏɴ ᴀꜱ ᴘᴏꜱꜱɪʙʟᴇ.\n\n➟ 📝𝘾𝙤𝙣𝙩𝙚𝙣𝙩 𝙣𝙖𝙢𝙚 : `{search}`\n➟ 👮𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮 : `{message.from_user.first_name}`\n\n༺@real_MoviesAdda2-ռօա2ɖɛǟȶɦ༻",
                                                                                                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▌│█║▌║  ᗩᗪᗪ ᗰᗴ 2 ᑌᖇ Ǥᖇᗝᑌᑭ  ║▌║█│▌", url=f'http://t.me/{temp.U_NAME}?startgroup=true')],[InlineKeyboardButton("♥️ Thank You MoviesAdda™ ♥️", callback_data="close_data")]]))
                
                 if settings["spell_check"]:
