@@ -1,3 +1,4 @@
+git+https://github.com/cinemagoer/cinemagoer
 pyrogram==2.0.35
 tgcrypto
 pymongo[srv]==3.12.3
