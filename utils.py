@@ -1,6 +1,6 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM
+from info import *
 from imdb import IMDb
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
@@ -39,7 +39,7 @@ class temp(object):
     U_NAME = None
     B_NAME = None
     SETTINGS = {}
-
+    
 async def is_subscribed(bot, query):
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
@@ -157,7 +157,7 @@ async def broadcast_messages(user_id, message):
 async def search_gagala(text):
     usr_agent = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-        'Chrome/109.0.5414.120 Safari/537.36'
+        'Chrome/61.0.3163.100 Safari/537.36'
         }
     text = text.replace(" ", '+')
     url = f'https://www.google.com/search?q={text}'
@@ -166,6 +166,7 @@ async def search_gagala(text):
     soup = BeautifulSoup(response.text, 'html.parser')
     titles = soup.find_all( 'h3' )
     return [title.getText() for title in titles]
+
 
 
 async def get_settings(group_id):
@@ -375,3 +376,4 @@ def humanbytes(size):
         size /= power
         n += 1
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
+
