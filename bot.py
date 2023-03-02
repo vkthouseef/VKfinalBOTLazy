@@ -13,7 +13,6 @@ from database.ia_filterdb import Media
 from database.users_chats_db import db
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 from utils import temp
-import os
 
 class Bot(Client):
 
@@ -45,8 +44,6 @@ class Bot(Client):
     async def stop(self, *args):
         await super().stop()
         logging.info("Bot stopped. Bye.")
-    
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app = Bot()
-    app.run(host="0.0.0.0", port=port)
+
+app = Bot()
+app.run()
